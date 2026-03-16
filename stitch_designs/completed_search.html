@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Completed Tasks - To-Do Today</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#833cf6",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#171022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .task-checked {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container -->
+<div class="relative flex h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-hidden border-x border-primary/10 shadow-2xl">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pt-6 justify-between sticky top-0 z-10">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-10">Completed Tasks</h1>
+</header>
+<!-- Search Section -->
+<div class="px-4 py-3 sticky top-16 z-10 bg-background-light dark:bg-background-dark">
+<label class="flex flex-col w-full group">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-primary/5 dark:bg-primary/10 border border-transparent focus-within:border-primary/30 transition-all">
+<div class="text-primary/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-transparent focus:ring-0 px-4 pl-2 text-base font-normal placeholder:text-primary/40 dark:placeholder:text-primary/30" placeholder="Search completed tasks" type="text" value=""/>
+</div>
+</label>
+</div>
+<!-- Task List Content -->
+<main class="flex-1 overflow-y-auto px-4 pb-20">
+<!-- Date Group: Today -->
+<div class="mt-4 mb-2 px-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-primary/60">Today, Oct 24</p>
+</div>
+<div class="space-y-2">
+<!-- Task Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/5 shadow-sm group">
+<div class="flex shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium line-through text-slate-400 dark:text-slate-500">Finalize project proposal</p>
+<p class="text-xs text-primary/60">Completed at 2:30 PM</p>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/5 shadow-sm group">
+<div class="flex shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium line-through text-slate-400 dark:text-slate-500">Weekly team sync</p>
+<p class="text-xs text-primary/60">Completed at 11:00 AM</p>
+</div>
+</div>
+<!-- Task Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/5 shadow-sm group">
+<div class="flex shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium line-through text-slate-400 dark:text-slate-500">Buy groceries for dinner</p>
+<p class="text-xs text-primary/60">Completed at 8:15 AM</p>
+</div>
+</div>
+</div>
+<!-- Date Group: Yesterday -->
+<div class="mt-8 mb-2 px-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-primary/60">Yesterday, Oct 23</p>
+</div>
+<div class="space-y-2">
+<!-- Task Item 4 -->
+<div class="flex items-center gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/5 shadow-sm group">
+<div class="flex shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium line-through text-slate-400 dark:text-slate-500">Gym session: Leg day</p>
+<p class="text-xs text-primary/60">Completed at 6:45 PM</p>
+</div>
+</div>
+<!-- Task Item 5 -->
+<div class="flex items-center gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/5 shadow-sm group">
+<div class="flex shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium line-through text-slate-400 dark:text-slate-500">Review marketing assets</p>
+<p class="text-xs text-primary/60">Completed at 4:20 PM</p>
+</div>
+</div>
+<!-- Task Item 6 -->
+<div class="flex items-center gap-4 bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/5 shadow-sm group">
+<div class="flex shrink-0 items-center justify-center text-primary">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium line-through text-slate-400 dark:text-slate-500">Call Mom</p>
+<p class="text-xs text-primary/60">Completed at 9:00 AM</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto border-t border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg px-4 pb-6 pt-3 flex justify-around">
+<a class="flex flex-col items-center gap-1 text-primary/40 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+<p class="text-[10px] font-medium uppercase tracking-tight">Tasks</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-[10px] font-medium uppercase tracking-tight">Calendar</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined task-checked">check_circle</span>
+<p class="text-[10px] font-bold uppercase tracking-tight">Completed</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary/40 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium uppercase tracking-tight">Profile</p>
+</a>
+</nav>
+<!-- Floating Action Button (Optional Contextual Action) -->
+<button class="absolute bottom-24 right-6 size-14 rounded-full bg-primary text-white shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</body></html>
